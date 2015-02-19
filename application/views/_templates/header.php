@@ -1,3 +1,13 @@
+<?php 
+    if (!isset($_SESSION["usuario"])) {
+        header('location'. URL . ' error/home');
+    }else{
+        session_start();
+        header('location'. URL . 'home/');
+    }
+ ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +102,7 @@
                             <!-- start: User Dropdown -->
                             <li class="dropdown">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="halflings-icon white user"></i> 
+                                    <i class="halflings-icon white user"></i> <?php  echo = $_SESSION["usuario"] ?>
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
