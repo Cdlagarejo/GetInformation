@@ -38,6 +38,15 @@ class ModelPostulaciones
 		return $query->fetch();
 	}
 
+	public function addPostulacion($nro_Documento,$tipo_Documento,$nombre_Postulante,$apellido_Postulante,$correo,$sexo,$fecha_nacimiento,$ficha)
+	{
+		$sql = "INSERT INTO tbl_postulante (nro_Documento,tipo_Documento,nombre_Postulante,apellido_Postulante,correo,sexo,fecha_nacimiento,ficha) Values (:nro_Documento,:tipo_Documento,:nombre_Postulante,:apellido_Postulante,:correo,:sexo,:fecha_nacimiento,:ficha)";
+		$query = $this ->db ->prepare($sql);
+		$parameters = array(':nro_Documento' => $nro_Documento, ':tipo_Documento' =>  strip_tags($tipo_Documento), ':nombre_Postulante' =>  strip_tags($nombre_Postulante), ':apellido_Postulante'=>  strip_tags($apellido_Postulante),':correo' =>  strip_tags($correo),':sexo' =>  strip_tags($sexo), ':fecha_nacimiento' => $fecha_nacimiento,':ficha' => $ficha);
+		$query -> execute($parameters);
+
+	}
+
 	
 	// public function updatePostulacion($nro_Documento,$tipo_Documento,$nombre_Postulante,$apellido_Postulante,$correo,$sexo,$estado,$fecha_nacimiento,$ficha,$nro_Documento)
 	// {

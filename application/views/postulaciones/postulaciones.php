@@ -79,22 +79,22 @@
 			<div class="">
 
 				<div class="box-content">
-					<form class="form-horizontal">
+					
 						<fieldset>  
 							<div class="control-group">
 								<label class="control-label" for="focusedInput">Número del Documento</label>
 								<div class="controls">
-									<input class="input-xlarge focused" name="txt_Pos_ID" id="focusedInput" type="text" value="">
+									<input class="input-xlarge focused"  id="txt_Pos_ID" type="text" value="" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="selectError3">Tipo de Documento</label>
 								<div class="controls">
-									<select id="selectError3" name="txt_Pos_Tipo_Documento">
+									<select id="txt_Pos_Tipo_Documento" >
 										<option></option>
-										<option>T.I</option>
-										<option>C.C</option>
-										<option>C.E</option>
+										<option value="TI">T.I</option>
+										<option value="CC">C.C</option>
+										<option value="CE">C.E</option>
 
 									</select>
 								</div>
@@ -102,28 +102,28 @@
 							<div class="control-group">
 								<label class="control-label" for="focusedInput"> Nombre del Postulante</label>
 								<div class="controls">
-									<input class="input-xlarge focused" name="txt_Pos_Nombre" id="focusedInput" type="text" value="">
+									<input class="input-xlarge focused" id="txt_Pos_Nombre"  type="text" value="" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="focusedInput">Apellido del postulante</label>
 								<div class="controls">
-									<input class="input-xlarge focused" name="txt_Pos_Apellido" id="focusedInput" type="text" value="">
+									<input class="input-xlarge focused" id="txt_Pos_Apellido" type="text" value="" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="focusedInput">Correo del postulante</label>
 								<div class="controls">
-									<input class="input-xlarge focused" name="txt_Pos_Correo" id="focusedInput" type="email" value="">
+									<input class="input-xlarge focused"  id="txt_Pos_Correo" type="email" value="" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="selectError3">Sexo</label>
 								<div class="controls">
-									<select id="selectError3" name="txt_Pos_Sexo">
-										<option></option>
-										<option>Masculino</option>
-										<option>Femenino</option>
+									<select id="txt_Pos_Sexo" >
+										<option value =""></option>
+										<option value="M">Masculino</option>
+										<option value="F">Femenino</option>
 
 									</select>
 								</div>
@@ -131,21 +131,21 @@
 							<div class="control-group">
 								<label class="control-label" for="focusedInput">Ficha</label>
 								<div class="controls">
-									<input class="input-xlarge focused" name="txt_Pos_Ficha" id="focusedInput" type="text" value="">
+									<input class="input-xlarge focused" id="txt_Pos_Ficha" type="text" value="" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="focusedInput">Fecha Nacimiento</label>
 								<div class="controls">
-									<input class="input-xlarge focused" name="txt_Pos_FechaN" id="focusedInput" type="date" value="">
+									<input class="input-xlarge focused" id="txt_Pos_FechaN" type="date" value="" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="selectError1">Asociar Beneficio</label>
 								<div class="controls">
-									<select id="selectError1" name="txt_Pos_AsociarB" multiple data-rel="chosen">
+									<select id="selectError1" name="txt_Pos_AsociarB" multiple data-rel="chosen" required>
 										<option>Option 1</option>
-										<option >Option 2</option>
+										<option>Option 2</option>
 										<option>Option 3</option>
 										<option>Option 4</option>
 										<option>Option 5</option>
@@ -157,7 +157,7 @@
 
 						<div class="modal-footer">
 							<a href="#" class="btn" data-dismiss="modal">Cerrar</a>
-							<input type="submit" class="btn btn-primary noty"  name="btn_Add_Postulacion" value="Aceptar"/>
+							<input type="submit" data-dismiss="modal" class="btn btn-primary noty"  id="btn_Add_Postulacion" value="Aceptar"/>
 							
 						</div>
 					</form>

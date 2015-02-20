@@ -11,7 +11,7 @@ class Postulaciones extends Controller
 
 	public function index()
 	{
-		$postulaciones = $this->model->getAllPostulaciones();
+		$postulaciones = $this ->model->getAllPostulaciones();
 		// load views. within the views we can echo out $songs and $amount_of_songs easily
 		require APP . 'views/_templates/header.php';
 		
@@ -48,6 +48,15 @@ class Postulaciones extends Controller
 		{
 			header('location:'. URL .'postulaciones/postulaciones');
 		} 
+	}
+	// public function update_Postulacion($)
+	// {
+	// 	# code...
+	// }
+
+	public function addPostulacion()
+	{
+		$this->model->addPostulacion($_POST['txt_Pos_ID'],$_POST['txt_Pos_Tipo_Documento'],$_POST['txt_Pos_Nombre'],$_POST['txt_Pos_Apellido'],$_POST['txt_Pos_Correo'],$_POST['txt_Pos_Sexo'],$_POST['txt_Pos_FechaN'],$_POST['txt_Pos_Ficha']);
 	}
 
 	public function lista_Chequeo($nro_Documento)

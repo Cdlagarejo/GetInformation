@@ -17,11 +17,16 @@ class Login extends Controller
 	public function login()
 	{
 		
-		if (condition) {
-			# code...
-		}
+		$login =  $this->model->login();
 
 	}
+
+	 public function logout()
+	 {
+	 	session_unset();
+	 	session_destroy();
+	 	session_start();
+	 }
 
 
 

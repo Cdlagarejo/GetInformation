@@ -27,6 +27,15 @@ class ModelBeneficios
 
 	}
 
+	public function addBeneficio($id_Beneficio,$nombre_Beneficio,$descripcion_Beneficio)
+	{
+		$sql = "INSERT INTO tbl_beneficio (id_Beneficio,nombre_Beneficio,descripcion_Beneficio) Values (:id_Beneficio,:nombre_Beneficio,:descripcion_Beneficio)";
+		$query = $this->db->prepare($sql);
+		$parameters  = array(':id_Beneficio' =>  $id_Beneficio, ':nombre_Beneficio' => strip_tags($nombre_Beneficio), ':descripcion_Beneficio' => strip_tags($descripcion_Beneficio) );
+		$query -> execute($parameters);
+
+	}
+
 
 
 }

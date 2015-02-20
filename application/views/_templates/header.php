@@ -1,11 +1,3 @@
-<?php 
-    if (!isset($_SESSION["usuario"])) {
-        header('location'. URL . ' error/home');
-    }else{
-        session_start();
-        header('location'. URL . 'home/');
-    }
- ?>
 
 
 
@@ -102,7 +94,7 @@
                             <!-- start: User Dropdown -->
                             <li class="dropdown">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="halflings-icon white user"></i> <?php  echo = $_SESSION["usuario"] ?>
+                                    <i class="halflings-icon white user"></i> 
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -110,8 +102,8 @@
                                         <span>Opciones de Cuentas</span>
                                     </li>
                                     <li><a href="<?php echo URL; ?>perfil/"><i class="halflings-icon user"></i> Perfil</a></li>
-                                    <li><a href="<?php echo URL; ?>administrador/"><i class="halflings-icon user"></i> </a></li>
-                                    <li><a href="<?php echo URL; ?>login/"><i class="halflings-icon off"></i>Salir</a></li>
+                                    <li><a href="<?php echo URL; ?>administrador/"><i class="halflings-icon user">Nuevo Administrador</i> </a></li>
+                                    <li><a href="<?php echo URL; ?>login/logout"><i class="halflings-icon off"></i>Salir</a></li>
                                 </ul>
                             </li>
                             <!-- end: User Dropdown -->
